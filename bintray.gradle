@@ -1,6 +1,7 @@
-group = PROJ_GROUP
-version = PROJ_VERSION
-project.archivesBaseName = PROJ_ARTIFACTID
+group='com.juniperphoton.com'
+version='1.0.0'
+
+project.archivesBaseName = 'flipperview'
 
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
@@ -17,15 +18,15 @@ artifacts {
 install {
     repositories.mavenInstaller {
         pom.project {
-            name PROJ_NAME
-            description PROJ_DESCRIPTION
-            url PROJ_WEBSITEURL
-            inceptionYear '2016'
+            name 'FlipperView'
+            description 'FlipperView'
+            url 'FlipperView'
+            inceptionYear '2017'
 
             packaging 'aar'
-            groupId PROJ_GROUP
-            artifactId PROJ_ARTIFACTID
-            version PROJ_VERSION
+            groupId 'com.juniperphoton.flipperview'
+            artifactId 'flipperview'
+            version '1.0.0'
 
             licenses {
                 license {
@@ -35,15 +36,14 @@ install {
                 }
             }
             scm {
-                connection PROJ_VCSURL
-                url PROJ_WEBSITEURL
-
+                connection 'FlipperView'
+                url 'FlipperView'
             }
             developers {
                 developer {
-                    id DEVELOPER_ID
-                    name DEVELOPER_NAME
-                    email DEVELOPER_EMAIL
+                    id 'juniperphoton'
+                    name 'juniperphoton'
+                    email 'dengweichao@hotmail.com'
                 }
             }
         }
@@ -60,18 +60,18 @@ bintray {
     publish = true
 
     pkg {
-        userOrg = 'juniperphotoncom' // 这个是你创建时的 organization, 必须要有，不然没办法找到指定路径
+        userOrg = 'jps'
         repo = 'maven'
         name = 'FlipperView'
         licenses = ['Apache-2.0']
-        vcsUrl = PROJ_VCSURL
-        websiteUrl = PROJ_WEBSITEURL
-        issueTrackerUrl = PROJ_ISSUETRACKERURL
+        vcsUrl = 'FlipperView'
+        websiteUrl = 'FlipperView'
+        issueTrackerUrl = 'dengweichao@hotmail.com'
         publicDownloadNumbers = true
         version {
-            name = PROJ_VERSION
-            desc = PROJ_DESCRIPTION
-            vcsTag = PROJ_VERSION
+            name = '1.0.0'
+            desc = 'FlipperView'
+            vcsTag = '1.0.0'
 
             gpg {
                 sign = true
